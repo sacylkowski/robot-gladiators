@@ -74,12 +74,14 @@ var fight = function (enemyName) {
     }
 };
 
-// fight each enemy-robot by looping over them and fighting them one at a time
-var startGame = functon() {
-    // reset player stats
-    playerHealth = 100;
+// funtion to start a new game
+var startGame = function() {
+// reset player stats
+playerHealth = 100;
 playerAttack = 10;
 playerMoney = 10;
+
+// fight each enemy-robot by looping over them and fighting them one at a time
 for (var i = 0; i < enemyNames.length; i++) {
     //if player is still alive, keeping fighting
     if (playerHealth > 0) {
@@ -114,7 +116,7 @@ startGame();
 startGame();
 
 // function to end the entire game
-var endGame = functon() {
+var endGame = function() {
     // if player is still alive, player wins!
     if (playerHealth > 0) {
     window.alert("Great job, you've survivsed the game!  You now have a score of " + playerMoney + ".");
